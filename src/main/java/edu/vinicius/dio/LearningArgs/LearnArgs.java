@@ -19,16 +19,22 @@ public class LearnArgs {
     }
 
     public static void main(String[] args){
-
+        try{
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
         System.out.println("Digite seu nome ");
         String scanNome = scanner.next();
+
+
 
         System.out.println("Digite sua idade ");
         int scanIdade = scanner.nextInt();
 
         System.out.println("Digite sua altura ");
         double scanAltura = scanner.nextDouble();
+
+        } catch (Exception e) {
+            System.out.println("Os campos idades e altura, precisam ser numérios");;
+        }
     }
 }
